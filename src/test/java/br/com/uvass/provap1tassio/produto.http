@@ -1,0 +1,33 @@
+#Inserindo Produto
+POST http://localhost:8080/produto
+Content-Type: application/json
+Accept: application/json
+
+
+{
+  "id" : 91,
+  "nome" : "teste90",
+  "descricao" : "250 GB",
+  "fotoUrl" : "Foto pendriver",
+  "dataCadastro" : "18/12/2020",
+  "dataUltimaAtualizacao" : "19/09/21",
+  "valorUnitario" : 200.00
+}
+###
+#Busca de produto por nome.
+GET http://localhost:8080/produto?nome=teclado
+Accept: application/json
+###
+#busca por produto, categoria, promoçao e promoçao item.
+GET http://localhost:8080/produto/3
+Accept: application/json
+###
+#Busca de produtos por nome e faixa de valor.
+GET http://localhost:8080/produto?nome=teclado&valorMinimo=10&valorMaximo=200
+Accept: application/json
+###
+#Busca de produto por faixa de valor.
+GET http://localhost:8080/produto?valorMinimo=0&valorMaximo=10000
+Accept: application/json
+###
+
